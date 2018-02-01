@@ -6,11 +6,13 @@
   "scripts": {
     "pretest": "hoverctl start",
     "test": "HTTP_PROXY=http://localhost:8500 NO_PROXY=localhost:8888 jest || hoverctl stop",
-    "posttest": "hoverctl stop"
+    "posttest": "hoverctl stop",
+		"clenup": "rm -iv ./user.json ./users.json"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.17.1",
     "request": "^2.83.0",
     "request-promise-native": "^1.0.5"
   },
